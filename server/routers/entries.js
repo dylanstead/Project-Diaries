@@ -7,6 +7,6 @@ const entriesRouter = Router();
 entriesRouter.get("/", entriesController.index)
 entriesRouter.post("/", entriesController.create)
 entriesRouter.get("/:id", entriesController.show)
-entriesRouter.delete("/id", postController.destroy)
+entriesRouter.delete("/:id", entriesController.destroy)
 
 module.exports = entriesRouter;
