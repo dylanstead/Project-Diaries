@@ -39,14 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
     journalEntries.appendChild(entryDiv);
 
-    // Add event listener to the submit button
     const submitButton = entryDiv.querySelector(".submit-entry");
     submitButton.addEventListener("click", function () {
       const entryContent = entryDiv.querySelector("textarea").value;
       const entryDate = entryDiv.querySelector('input[type="date"]').value;
       if (entryContent && entryDate) {
         alert(`Entry submitted for ${entryDate}`);
-        // Here you would typically send the data to a server
       } else {
         alert("Please fill in both the date and entry content.");
       }
@@ -55,6 +53,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   addEntryButton.addEventListener("click", createJournalEntry);
 
-  // Create the first entry automatically
   createJournalEntry();
 });
