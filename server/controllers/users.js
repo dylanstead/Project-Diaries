@@ -16,7 +16,9 @@ async function register(req, res) {
 async function login(req, res) {
     const data = req.body
     try {
+        console.log(data);
         const user = await User.getUserByUsername(data.username)
+        console.log(user);
         if (!user) {throw new Error('No user with this username') }
 
         if (data.password === user.password) {
